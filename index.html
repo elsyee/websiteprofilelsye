@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website profil sederhana dan responsif.">
+  <title>Profil Saya | Elsye</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Profil Saya, halaman utama">
+        <span class="brand-mark">P</span>
+        <span>Profil<span class="brand-light">Saya.</span></span>
+      </a>
+      <span class="header-note">Website Profil Pribadi</span>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="profile-section" aria-labelledby="profile-title">
+      <div class="profile-copy">
+        <p class="eyebrow"><span class="status-dot"></span> HALO, SELAMAT DATANG</p>
+        <h1 id="profile-title">Kenalan, yuk!<br><span class="accent-text">Aku Elsye Sukma Argita.</span></h1>
+        <p class="profile-description" id="profile-description">
+          Saya mahasiswa Sistem Informasi yang tertarik dengan teknologi, serta pengembangan web. Saya senang belajar hal baru dan mengembangkan keterampilan melalui proyek sederhana.
+        </p>
+        <div class="button-group">
+          <button class="button button-primary" id="change-text" type="button">Ubah Teks <span aria-hidden="true">↗</span></button>
+          <button class="button button-secondary" id="change-theme" type="button"><span aria-hidden="true">◐</span> Ganti Tema</button>
+        </div>
+        <p class="helper-text" id="interaction-status" aria-live="polite">Coba tombol di atas untuk melihat interaksi.</p>
+      </div>
+
+        <!-- Foto profil -->
+  <div class="profile-art" aria-label="Foto profil Elsye">
+    <div class="art-orbit orbit-one"></div>
+    <div class="art-orbit orbit-two"></div>
+    <div class="art-spark spark-one">✦</div>
+    <div class="art-spark spark-two">✳</div>
+
+    <img
+      src="foto elsye.png"
+      alt="Foto profil Elsye Sukma Argita"
+      class="profile-photo"
+    >
+
+    <div class="art-label">
+      <span class="label-icon">✦</span>
+      Curious mind, creative heart
+    </div>
+  </div>
+</section>
+    <section class="skills-section" aria-labelledby="skills-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">SEDIKIT TENTANG AKU</p>
+          <h2 id="skills-title">Hobi &amp; Keterampilan</h2>
+        </div>
+        <p class="section-description">Hal-hal yang aku suka pelajari dan kembangkan.</p>
+      </div>
+
+      <div class="skills-grid">
+        <article class="skill-card">
+          <div class="skill-icon icon-lilac" aria-hidden="true">⌘</div>
+          <h3>Web Development</h3>
+          <p>Membuat halaman web dengan HTML, CSS, dan JavaScript serta belajar membangun tampilan yang nyaman digunakan.</p>
+          <span class="card-tag">Teknologi</span>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon icon-peach" aria-hidden="true">✎</div>
+          <h3>Memasak</h3>
+          <p>Mencoba resep baru, mengolah bahan makanan, dan belajar membuat hidangan sederhana yang lezat.</p>
+          <span class="card-tag">Hobi</span>
+        </article>
+        <article class="skill-card">
+          <div class="skill-icon icon-mint" aria-hidden="true">◉</div>
+          <h3>Komunikasi</h3>
+          <p>Melatih public speaking, bekerja sama dengan orang lain, dan menyampaikan ide dengan percaya diri.</p>
+          <span class="card-tag">Soft skill</span>
+        </article>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <span>© <span id="current-year">2026</span> Profil Saya</span>
+      <span>Dibuat dengan <span class="heart">♥</span> dan semangat belajar</span>
+    </footer>
+  </main>
+</body>
+</html>

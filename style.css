@@ -1,0 +1,565 @@
+/* ===== Pengaturan dasar ===== */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #25233a;
+  background: #f7f6fc;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --page-bg: #f7f6fc;
+  --surface: #ffffff;
+  --text: #25233a;
+  --muted: #77758b;
+  --accent: #7160d8;
+  --accent-dark: #5d4cc5;
+  --border: #e9e6f4;
+  --shadow: 0 18px 55px rgba(54, 43, 103, 0.08);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--page-bg);
+  color: var(--text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+button {
+  font: inherit;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.header-inner {
+  width: 88%;
+  max-width: 1120px;
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.brand-light {
+  color: var(--accent);
+}
+
+.header-note {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.container {
+  width: 88%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+
+/* ==================================================
+   PROFIL
+   ================================================== */
+
+.profile-section {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 52px;
+  padding: 68px 0 76px;
+}
+
+.eyebrow {
+  margin: 0 0 16px;
+  color: var(--accent);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 6px;
+  border-radius: 50%;
+  background: #54bd8a;
+  vertical-align: 1px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 22px;
+  font-size: clamp(2.6rem, 5vw, 4.25rem);
+  line-height: 1.06;
+  letter-spacing: -0.065em;
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.profile-description {
+  max-width: 540px;
+  margin-bottom: 26px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.button {
+  min-height: 46px;
+  padding: 0 19px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:focus-visible {
+  outline: 3px solid #a9a0f5;
+  outline-offset: 3px;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(113, 96, 216, 0.2);
+}
+
+.button-primary:hover {
+  background: var(--accent-dark);
+}
+
+.button-secondary {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.helper-text {
+  min-height: 20px;
+  margin: 13px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+
+/* Area foto profil */
+.profile-art {
+  position: relative;
+  min-height: 340px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #e8e2ff;
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    #ece8ff 0%,
+    #f8edfa 54%,
+    #fbece4 100%
+  );
+}
+
+.art-orbit {
+  position: absolute;
+  border: 1px solid rgba(113, 96, 216, 0.18);
+  border-radius: 50%;
+}
+
+.orbit-one {
+  width: 250px;
+  height: 250px;
+}
+
+.orbit-two {
+  width: 310px;
+  height: 310px;
+}
+
+.art-spark {
+  position: absolute;
+  color: #8b7be5;
+  font-size: 1.8rem;
+}
+
+.spark-one {
+  top: 47px;
+  right: 66px;
+}
+
+.spark-two {
+  bottom: 76px;
+  left: 58px;
+  color: #e7a17e;
+  font-size: 1.5rem;
+}
+
+
+/* Foto pribadi */
+.profile-photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: auto;
+  height: 340px;
+  max-width: 90%;
+  object-fit: contain;
+  object-position: center bottom;
+  align-self: end;
+}
+
+
+/* Label pada foto */
+.art-label {
+  position: absolute;
+  bottom: 18px;
+  z-index: 5;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #50476d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(54, 43, 103, 0.08);
+}
+
+.label-icon {
+  margin-right: 5px;
+  color: var(--accent);
+}
+
+
+/* ==================================================
+   SKILLS
+   ================================================== */
+
+.skills-section {
+  padding: 36px 0 64px;
+  border-top: 1px solid var(--border);
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.7rem, 3vw, 2.25rem);
+  letter-spacing: -0.045em;
+}
+
+.section-description {
+  max-width: 300px;
+  margin-bottom: 3px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.skill-card {
+  padding: 25px 23px 23px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  transition:
+    transform 0.2s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-icon {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  margin-bottom: 19px;
+  border-radius: 15px;
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.icon-lilac {
+  background: #eeeaff;
+  color: #7160d8;
+}
+
+.icon-peach {
+  background: #fff0e7;
+  color: #d88356;
+}
+
+.icon-mint {
+  background: #e3f7ef;
+  color: #319b74;
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.skill-card p {
+  min-height: 84px;
+  margin-bottom: 18px;
+  color: var(--muted);
+  font-size: 0.87rem;
+  line-height: 1.75;
+}
+
+.card-tag {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: var(--page-bg);
+  color: var(--accent);
+  font-size: 0.73rem;
+  font-weight: 700;
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 0 28px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.heart {
+  color: #e17e9a;
+}
+
+
+/* ==================================================
+   TEMA GELAP
+   ================================================== */
+
+body.dark-theme {
+  --page-bg: #171625;
+  --surface: #211f32;
+  --text: #f2f0ff;
+  --muted: #b0adc5;
+  --accent: #aa9cff;
+  --accent-dark: #9381f5;
+  --border: #37334b;
+  --shadow: 0 18px 55px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .profile-art {
+  border-color: #403956;
+  background: linear-gradient(
+    145deg,
+    #302a4a 0%,
+    #3a2b43 54%,
+    #3e2e35 100%
+  );
+}
+
+body.dark-theme .art-label {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: rgba(33, 31, 50, 0.88);
+  color: #f2f0ff;
+}
+
+body.dark-theme .icon-lilac {
+  background: #393052;
+  color: #c2b7ff;
+}
+
+body.dark-theme .icon-peach {
+  background: #4a332e;
+  color: #ffc09b;
+}
+
+body.dark-theme .icon-mint {
+  background: #263f3a;
+  color: #8de0bd;
+}
+
+
+/* ==================================================
+   TABLET DAN LAPTOP KECIL
+   ================================================== */
+
+@media (max-width: 900px) {
+  .profile-section {
+    gap: 30px;
+  }
+
+  .profile-art {
+    min-height: 310px;
+  }
+
+  .profile-photo {
+    height: 310px;
+  }
+
+  .skill-card {
+    padding: 21px 18px;
+  }
+}
+
+
+/* ==================================================
+   HP
+   ================================================== */
+
+@media (max-width: 767px) {
+  .header-inner,
+  .container {
+    width: 90%;
+  }
+
+  .header-inner {
+    min-height: 66px;
+  }
+
+  .header-note {
+    font-size: 0.75rem;
+  }
+
+  .profile-section {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 48px 0 52px;
+  }
+
+  h1 {
+    font-size: clamp(2.65rem, 12vw, 3.5rem);
+  }
+
+  .profile-art {
+    min-height: 300px;
+  }
+
+  .profile-photo {
+    height: 300px;
+    max-width: 90%;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .section-description {
+    max-width: 100%;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-card p {
+    min-height: 0;
+  }
+
+  .skills-section {
+    padding: 30px 0 42px;
+  }
+
+  .site-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+   ================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
